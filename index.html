@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Book </title>
+    <script>
+var names=["Ishi Srivastava", "Pawan Kumar Srivastava", "Shradha Chandra", "Chinmin Chandra"];
+var images=["ISHI.jpg","pawan.jpg", "shradha.jpg", "chinmin.jpg"];
+var i = 0;   
+
+function update()
+{
+    i++;
+       var family_numbers=3;
+       if(i > family_numbers)
+       {
+           i=0;
+       }
+       var updated_images= images[i];
+       var updated_names= names[i];
+       document.getElementById("image").src= updated_images;
+       document.getElementById("names").innerHTML= updated_names;
+       
+   }
+   </script>
+   <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="outer">
+    <div id="din">
+    <h1>Family Book</h1>
+    <img id="image" src="https://en.pimg.jp/018/719/508/1/18719508.jpg">
+    <p id="names"></p>
+    <button id="hh"onclick="update()">Next
+    </button>
+</div>
+</div>
+</body>
+</html>
